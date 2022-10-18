@@ -6,9 +6,13 @@
   "types": "./build/index.d.ts",
   "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
   "license": "MIT",
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "preversion": "yarn build"
   },
   "dependencies": {
     "debug": "^4.3.4"
