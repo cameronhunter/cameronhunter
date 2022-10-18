@@ -1,0 +1,8 @@
+{
+  "name": "@cameronhunter/debug-logger",
+  "version": "0.0.0",
+  "description": "A TypeScript decorator for classes that logs all method usages",
+  "main": "./build/index.js",
+  "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
+  "license": "MIT"
+}
