@@ -1,6 +1,8 @@
 # @cameronhunter/debug-logger
 
-A TypeScript decorator for classes that logs all method usages using the [`debug`](https://www.npmjs.com/package/debug) package.
+A TypeScript decorator for classes that logs all method usages using the [`debug`](https://www.npmjs.com/package/debug)
+package. Logging is enabled using the `DEBUG` environment variable – see the
+[`debug`](https://www.npmjs.com/package/debug) package for details.
 
 ## Examples
 
@@ -10,7 +12,7 @@ The decorator can be used directly and it will log to a namespace matching the c
 of `new HelloWorld().main('World')` below will result in `HelloWorld main("World");` being logged.
 
 ```ts
-import DebugLogging from "@cameronhunter/debug-logger";
+import DebugLogging from '@cameronhunter/debug-logger';
 
 @DebugLogging
 class HelloWorld {
@@ -27,9 +29,9 @@ execution of `new HelloWorld().main('World')` below will result in `my-debug-nam
 logged.
 
 ```ts
-import DebugLogging from "@cameronhunter/debug-logger";
+import DebugLogging from '@cameronhunter/debug-logger';
 
-@DebugLogging("my-debug-namespace")
+@DebugLogging('my-debug-namespace')
 class HelloWorld {
   main(name: string) {
     console.log(`Hello ${name}!`);
@@ -44,9 +46,9 @@ export it for use around an application. An execution of `new HelloWorld().main(
 `my-namespace:HelloWorld main("World");` being logged.
 
 ```ts
-import DebugLogger from "@cameronhunter/debug-logger";
+import DebugLogger from '@cameronhunter/debug-logger';
 
-const CustomLogger = DebugLogger("my-namespace");
+const CustomLogger = DebugLogger('my-namespace');
 
 @CustomLogger
 class HelloWorld {
