@@ -27,5 +27,8 @@
     "testPathIgnorePatterns": [
       "__mocks__"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
